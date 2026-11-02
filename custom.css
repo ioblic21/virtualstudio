@@ -1,0 +1,368 @@
+/* ==========================================================================
+   MINIMALIST THEME FOR REVEAL.JS (B&W Minimalist Style)
+   Clean, authentic editorial layout inspired by classic Swiss/Helvetica slides.
+   Zero cards, zero borders, zero drop shadows.
+   ========================================================================== */
+
+@import url('dist/theme/white.css');
+
+:root {
+  --bg-color: #ffffff;
+  --text-main: #000000;
+  --text-muted: #444444;
+  --text-light: #777777;
+  --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Master Page Setup */
+html, body, .reveal {
+  background-color: var(--bg-color) !important;
+  color: var(--text-main);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Force Reveal sections to exact 1920x1080 canvas */
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides > section {
+  width: 1920px !important;
+  height: 1080px !important;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ==========================================================================
+   UNIVERSAL MEDIA RESET
+   Ensures images and videos fill their exact containers with no letterboxing,
+   no rounded corners, no borders, and no shadows.
+   ========================================================================== */
+.reveal .slides section img,
+.reveal .slides section video,
+.reveal section img,
+.reveal section video,
+.reveal img,
+.reveal video {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+/* Slide Canvas: 1760px x 960px inside 1920x1080 (80px margin left/right, 60px top/bottom) */
+.slide-canvas {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 1760px;
+  height: 960px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+.slide-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.15;
+  margin: 0 0 12px 0;
+}
+
+.slide-subtitle {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin: 0 0 32px 0;
+}
+
+/* Clean Hyphen List (Minimalist Style from Sample Slides) */
+.hyphen-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hyphen-list > li {
+  font-size: 26px;
+  line-height: 1.55;
+  color: #222222;
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.hyphen-list > li::before {
+  content: "- ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.hyphen-list strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+.hyphen-list .sub-items {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+.hyphen-list .sub-items li {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #444444;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.hyphen-list .sub-items li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #666666;
+}
+
+/* Disadvantage Note (Minimalist, Pure Typography, No Box) */
+.disadvantage-text {
+  margin-top: 28px;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #222222;
+}
+
+.disadvantage-text strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* ==========================================================================
+   SLIDE 1: Title Slide
+   ========================================================================== */
+.s1-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 1760px;
+  margin-bottom: 24px;
+}
+
+.s1-title {
+  font-size: 72px;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.s1-subtitle {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: #333333;
+  line-height: 1;
+}
+
+.s1-banner {
+  width: 1760px;
+  height: 740px;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   SLIDE 2: Three Eras (Triptych)
+   Clean 3-column layout matching user's sample style (image + text below).
+   ========================================================================== */
+.s2-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1760px;
+  margin-top: 10px;
+}
+
+.s2-col {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-video-frame {
+  width: 550px;
+  height: 640px;
+  background: #000000;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.s2-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.s2-sub {
+  font-size: 22px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SLIDE 3: Why?
+   3 clean editorial text columns, pure white background, no cards.
+   ========================================================================== */
+.s3-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 1760px;
+  margin-top: 24px;
+}
+
+.s3-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.s3-col-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 18px;
+}
+
+/* ==========================================================================
+   SLIDES 4, 5, 6, 7, 8: Two-Column Side-by-Side Layout
+   Left media / Right text, or Left text / Right media.
+   ========================================================================== */
+.two-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1760px;
+  height: 960px;
+  gap: 70px;
+}
+
+/* Reversed orientation for visual variety (Slide 6, 7, 8) */
+.two-col.reversed {
+  flex-direction: row-reverse;
+}
+
+.col-text {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-media {
+  width: 1000px;
+  height: 640px;
+  background: #000000;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Square media option (Slide 8 Astronaut: 640x640) */
+.col-media.square {
+  width: 640px;
+  height: 640px;
+}
+
+/* ==========================================================================
+   SLIDE 9: Conclusion & Academic Citations (Pure Text)
+   Two clean columns: Summary on the left, APA citations on the right.
+   ========================================================================== */
+.s9-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  width: 1760px;
+  margin-top: 20px;
+}
+
+.s9-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.s9-col-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.citations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.citations-list li {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  text-indent: -24px;
+}
+
+.citations-list li em {
+  font-style: italic;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* ==========================================================================
+   CONTROLS & PROGRESS
+   Clean, unobtrusive navigation elements.
+   ========================================================================== */
+.reveal .progress {
+  height: 3px;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+.reveal .progress span {
+  background: #000000;
+}
+
+.reveal .slide-number {
+  background: transparent;
+  color: #888888;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 18px;
+}

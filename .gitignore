@@ -1,0 +1,14 @@
+# Raw Source Media Folders (large files not needed for presentation)
+North By Northwest*
+The Room*
+VFXR*
+Virtual Production with Unreal*
+
+# Keynote backup & assets
+assets/
+index_keynote_backup.html
+reveal.js-master/
+
+# System files
+.DS_Store
+Thumbs.db
